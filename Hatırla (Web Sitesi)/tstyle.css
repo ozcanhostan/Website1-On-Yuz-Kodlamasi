@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*
+{
+	font-family: 'Roboto';
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	background-image: url(bg4.png);
+	background-repeat: no-repeat;
+	object-fit: cover;
+	background-size: cover;
+}
+.toggle
+{
+	position: fixed;
+	top: 20px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	background: #FF5F16 url(menu.png);
+	border-radius: 50%;
+	background-size: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 10000;
+	justify-content: space-between;
+	align-items: center;
+}
+.sidebar
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.toggle.active
+{
+	background: #FF5F16 url(close.png);
+	border-radius: 25%;
+	background-size: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+}
+.sidebar
+{
+	position: fixed;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10000;
+	transition: 0.5s;
+	padding: 40px;
+	right: -100%;
+}
+.sidebar.active
+{
+	right: 0;
+}
+.sidebar ul
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.sidebar ul li
+{
+	list-style: none;
+	padding: 5px;
+}
+.sidebar ul li a
+{
+	color: #111;
+	text-decoration: none;
+	font-size: 2em;
+	margin: 10px 0;
+	font-weight: 300;
+	letter-spacing: 2px;
+	transition: 0.3s;
+}
+.sidebar ul li a:hover
+{
+	color: #FF5F16;
+}
+h4
+{
+	padding-top: 50px;
+	font-size: 2.5em;
+	color: #FF5F16;
+	font-style: bold;
+	align-items: center;
+	text-align: center;
+}
+.testimonials .content 
+{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin-top: 40px;
+}
+.testimonials .content .box 
+{
+	width: 340px;
+	margin-top: 20px;
+	padding: 30px;
+	background: #fff;
+	box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.25);	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 5px;
+}
+.testimonials .content .box2 
+{
+	width: 340px;
+	margin-top: 20px;
+	margin-right: 50px;
+	margin-left: 50px;
+	padding: 30px;
+	background: #fff;
+	box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.25);	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 5px;
+}
+.testimonials .content .box .imgBx
+{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.testimonials .content .box .imgBx img 
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.testimonials .content .box2 .imgBx
+{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.testimonials .content .box2 .imgBx img 
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.testimonials .btn3:hover
+{
+	background: #FF5F16;
+	color: #fff;
+}
+.testimonials .content .box2 .text,
+.testimonials .content .box .text
+{
+	text-align: center;
+}
+.testimonials .content .box .text .titleText,
+.testimonials .content .box2 .text .titleText
+{
+	padding-top: 10px;
+	color: #C4C4C4;
+}
+::-webkit-scrollbar
+{
+	width: .60rem;
+	border-radius: .5rem;
+}
+::-webkit-scrollbar-thumb
+{
+	background-color: #BEBEBE;
+	border-radius: .5rem;
+}
+::-webkit-scrollbar-thumb:hover
+{
+	background-color: #F26322;
+}
+@media (max-width: 991px)
+{
+	.testimonials
+	{
+		height: 400vh;
+	}
+	.testimonials .content .box
+	{
+		margin: 50px;
+	} 
+	h4
+	{
+		color: #fff;
+	}
+}
+@media (max-width: 375px)
+{
+	h4
+	{
+		margin-top: 50px;
+	}
+	.sidebar .menu a
+	{
+		text-align: center;
+		font-size: 1.7em;
+	}
+}

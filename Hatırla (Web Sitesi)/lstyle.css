@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*
+{
+	font-family: 'Roboto';
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	background-image: url(bg5.png);
+	background-repeat: no-repeat;
+	object-fit: cover;
+	background-size: cover;
+}
+.toggle
+{
+	position: fixed;
+	top: 20px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	background: #FF5F16 url(menu.png);
+	border-radius: 50%;
+	background-size: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 10000;
+	justify-content: space-between;
+	align-items: center;
+}
+.sidebar
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.toggle.active
+{
+	background: #FF5F16 url(close.png);
+	border-radius: 25%;
+	background-size: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+}
+.sidebar
+{
+	position: fixed;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10000;
+	transition: 0.5s;
+	padding: 40px;
+	right: -100%;
+}
+.sidebar.active
+{
+	right: 0;
+}
+.sidebar ul
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.sidebar ul li
+{
+	list-style: none;
+	padding: 5px;
+}
+.sidebar ul li a
+{
+	color: #111;
+	text-decoration: none;
+	font-size: 2em;
+	margin: 10px 0;
+	font-weight: 300;
+	letter-spacing: 2px;
+	transition: 0.3s;
+}
+.sidebar ul li a:hover
+{
+	color: #FF5F16;
+}
+section
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+section .signup-box
+{
+	margin-right: 70px;
+	width: 300px;
+	height: 420px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.37);
+}
+.signup-box h1
+{
+	color: #FF5F16;
+	font-size: 2em;
+	text-align: center;
+	padding: 20px 0 20px 0;
+}
+section form 
+{
+	text-align: center;
+	box-sizing: border-box; 
+}
+form .box 
+{	
+	position: relative;
+}
+.submit
+{
+	padding-top: 20px;
+}
+.submit input
+{
+	border: none;
+	width: 200px;
+	height: 35px;
+	margin: 20px;
+	border-radius: 150px;
+	color: #fff;
+	background: #FF5F16;
+	box-shadow: 0px 1px 4px #FF5F16;
+	transition: 0.5s;	
+}
+.submit input:hover
+{
+	letter-spacing: 5px;
+}
+.box input 
+{
+	border: none;
+	width: 200px;
+	height: 35px;
+	margin: 20px;
+	border-radius: 150px;
+	background: #fff;
+	box-shadow: 0px 1px 4px #FF5F16;
+}
+input:focus{
+    outline: none;
+    text-align: center;
+}
+::-webkit-input-placeholder
+{
+	color: #C4C4C4;
+	text-align: center;
+}
+section .login-box
+{
+	width: 300px;
+	height: 340px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.37);
+}
+.login-box h2
+{
+	color: #FF5F16;
+	font-size: 2em;
+	text-align: center;
+	padding: 20px 0 20px 0;
+}
+@media (max-width: 991px)
+{
+	body
+	{
+		background: url(bg4.png);
+		background-repeat: no-repeat;
+		height: 170vh;
+	}
+	section .signup-box
+	{
+		margin-top: 400px;
+		margin-left: 70px;
+	}
+	section .login-box
+	{
+		margin-top: 100px;
+	} 
+
+}
+@media (max-width: 375px)
+{
+	section
+	{
+		overflow: hidden;
+	}
+	.toggle
+	{
+		margin-right: 15px;
+	}
+	section .signup-box
+	{
+		margin-right: 70px;
+	}
+	section .login-box
+	{
+		margin-top: 70px;
+		margin-left: 5px;
+	}
+	.sidebar .menu a 
+	{
+		margin-left: -15px;
+	}
+}
